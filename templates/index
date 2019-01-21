@@ -11,6 +11,8 @@
 #
 Template, Hostname, Platform, Command
 
+alcatel_aos_show_vlan.template, .*, alcatel_aos, show vlan
+
 alcatel_sros_show_router_bgp_routes_vpn-ipv4.template, .*, alcatel_sros, sh[[ow]] router bgp rou[[tes]] vpn-ipv4
 alcatel_sros_show_service_id_base.template, .*, alcatel_sros, sh[[ow]] serv[[ice]] id ba[[se]]
 alcatel_sros_oam_mac-ping.template, .*, alcatel_sros, oam mac-pi[[ng]]
@@ -42,8 +44,10 @@ arista_eos_show_ip_route.template, .*, arista_eos, sh[[ow]] i[[p]] rou[[te]]
 arista_eos_show_version.template, .*, arista_eos, sh[[ow]] ver[[sion]]
 arista_eos_show_ip_arp.template, .*, arista_eos, sh[[ow]] i[[p]] ar[[p]]
 arista_eos_show_ip_bgp.template, .*, arista_eos, sh[[ow]] i[[p]] bg[[p]]
+arista_eos_show_module.template, .*, arista_eos, sh[[ow]] modu[[le]]
 arista_eos_bash_df_-h.template, .*, arista_eos, bas[[h]] d[[f]] [[-h]]
 arista_eos_show_clock.template, .*, arista_eos, sh[[ow]] clo[[ck]]
+arista_eos_dir_flash.template, .*, arista_eos, dir fl[[ash:]]
 arista_eos_show_mlag.template, .*, arista_eos, sh[[ow]] ml[[ag]]
 arista_eos_show_vlan.template, .*, arista_eos, sh[[ow]] vl[[an]]
 
@@ -51,6 +55,7 @@ aruba_os_show_ipv6_interface_brief.template, .*, aruba_os, sh[[ow]] ipv6 in[[ter
 aruba_os_show_ip_interface_brief.template, .*, aruba_os, sh[[ow]] ip in[[terface]] b[[rief]]
 
 avaya_ers_show_mac-address-table.template, .*, avaya_ers, sh[[ow]] mac-a[[ddress-table]]
+avaya_ers_show_mlt_all-members.template, .*, avaya_ers, sh[[ow]] ml[[t]] a[[ll-members]]
 avaya_ers_show_interface_name.template, .*, avaya_ers, sh[[ow]] in[[terfaces]] n[[ames]]
 avaya_ers_show_logging_config.template, .*, avaya_ers, sh[[ow]] lo[[gging]] co[[nfig]]
 avaya_ers_show_sys-info.template, .*, avaya_ers, sh[[ow]] sys-[[info]]
@@ -74,7 +79,7 @@ brocade_fastiron_show_span.template, .*, brocade_fastiron, sh[[ow]] sp[[an]]
 brocade_fastiron_show_topo.template, .*, brocade_fastiron, sh[[ow]] to[[pology-group]]
 brocade_fastiron_show_arp.template, .*, brocade_fastiron, sh[[ow]] a[[rp]]
 
-brocade_netiron_show_running-config_interface_ve.template, .*, brocade_netiron, sh[[ow]] ru[[nning-config]] i[[nterface]] v[[e]]
+brocade_netiron_show_running-config_interface.template, .*, brocade_netiron, sh[[ow]] ru[[nning-config]] i[[nterface]]
 brocade_netiron_show_lldp_neighbors_detail.template, .*, brocade_netiron, sh[[ow]] ll[[dp]] n[[eighbors]] d[[etail]]
 brocade_netiron_show_running-config_vlan.template, .*, brocade_netiron, sh[[ow]] ru[[nning-config]] v[[lan]]
 brocade_netiron_show_interfaces_brief.template, .*, brocade_netiron, sh[[ow]] in[[terfaces]] b[[rief]]
@@ -86,11 +91,13 @@ brocade_netiron_show_span.template, .*, brocade_netiron, sh[[ow]] sp[[anning-tre
 brocade_netiron_show_topo.template, .*, brocade_netiron, sh[[ow]] to[[pology-group]]
 
 checkpoint_gaia_show_interfaces_all.template, .*, checkpoint_gaia, show interfaces all
+checkpoint_gaia_show_ntp_servers.template, .*, checkpoint_gaia, show ntp servers 
 checkpoint_gaia_show_version_all.template, .*, checkpoint_gaia, show version all
 checkpoint_gaia_show_domainname.template, .*, checkpoint_gaia, show domainname
 checkpoint_gaia_show_ipv6_route.template, .*, checkpoint_gaia, show ipv6 route
 checkpoint_gaia_show_asset_all.template, .*, checkpoint_gaia, show asset all
 checkpoint_gaia_show_route.template, .*, checkpoint_gaia, show route
+checkpoint_gaia_show_dns.template, .*, checkpoint_gaia, show dns
 checkpoint_gaia_show_lom.template, .*, checkpoint_gaia, show lom
 checkpoint_gaia_fw_stat.template, .*, checkpoint_gaia, fw stat
 
@@ -103,11 +110,14 @@ cisco_asa_show_vpn-sessiondb_detail_l2l.template, .*, cisco_asa, sh[[ow]] vpn-[[
 cisco_asa_show_crypto_ikev1_sa_detail.template, .*, cisco_asa, sh[[ow]] cry[[pto]] ikev1 sa d[[etail]]
 cisco_asa_show_object-group_network.template, .*, cisco_asa, sh[[ow]] (?:ru[[nning-config]] object-[[group]]|ob[[ject-group]]) n[[etwork]]
 cisco_asa_show_running-config_ipsec.template, .*, cisco_asa, sh[[ow]] ru[[nning-config]] ips[[ec]]
+cisco_asa_show_interface_detail.template, .*, cisco_asa, sh[[ow]] int[[erface]] d[[etail]]
 cisco_asa_show_crypto_ipsec_sa.template, .*, cisco_asa, sh[[ow]] cry[[pto]] ip[[sec]] sa
 cisco_asa_show_resource_usage.template, .*, cisco_asa, sh[[ow]] res[[ource]] u[[sage]]
 cisco_asa_show_access-list.template, .*, cisco_asa, sh[[ow]] ac[[cess-list]]
+cisco_asa_show_license_all.template, .*, cisco_asa, (?:fa[[ilover]]\s+e[[xec]]\s+)?sh[[ow]] lic[[ense]] a[[ll]]
 cisco_asa_show_interface.template, .*, cisco_asa, sh[[ow]] int[[erface]]
 cisco_asa_show_inventory.template, .*, cisco_asa, sh[[ow]] inven[[tory]]
+cisco_asa_show_asp_drop.template, .*, cisco_asa, sh[[ow]] asp d[[rop]]
 cisco_asa_show_failover.template, .*, cisco_asa, sh[[ow]] fa[[ilover]]
 cisco_asa_show_version.template, .*, cisco_asa, sh[[ow]] ver[[sion]]
 cisco_asa_show_route.template, .*, cisco_asa, sh[[ow]] ro[[ute]]
@@ -167,11 +177,13 @@ cisco_ios_show_standby.template, .*, cisco_ios, sh[[ow]] sta[[ndby]]
 cisco_ios_show_version.template, .*, cisco_ios, sh[[ow]] ver[[sion]]
 cisco_ios_show_ip_arp.template, .*, cisco_ios, sh[[ow]] i[[p]] a[[rp]]
 cisco_ios_show_ip_bgp.template, .*, cisco_ios, sh[[ow]] i[[p]] bgp
+cisco_ios_show_tacacs.template, .*, cisco_ios, sh[[ow]] tacacs
 cisco_ios_show_clock.template, .*, cisco_ios, sh[[ow]] clo[[ck]]
 cisco_ios_show_vlan.template, .*, cisco_ios, sh[[ow]] vlan
 cisco_ios_show_vrf.template, .*, cisco_ios, sh[[ow]] vrf
 cisco_ios_dir.template,  .*, cisco_ios, dir
 
+cisco_nxos_show_l2rib_internal_permanently-frozen-list.template, .*, cisco_nxos, sh[[ow]] l2ri[[b]] i[[nternal]] pe[[rmanently-frozen-list]]
 cisco_nxos_show_configuration_session_summary.template, .*, cisco_nxos, sh[[ow]] configu[[ration]] s[[ession]] su[[mmary]]
 cisco_nxos_show_interface_transceiver_details.template, .*, cisco_nxos, sh[[ow]] int[[erface]] tra[[nsceiver]] de[[tails]]
 cisco_nxos_show_environment_temperature.template, .*, cisco_nxos, sh[[ow]] env[[ironment]] t[[emperature]]
